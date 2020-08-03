@@ -7,7 +7,7 @@ namespace Liip\Serializer\Template;
 use Twig\Environment;
 use Twig\Loader\ArrayLoader;
 
-final class Serialization
+class Serialization
 {
     private const TMPL_FUNCTION = <<<'EOT'
 <?php
@@ -46,7 +46,11 @@ EOT;
 
     private const TMPL_LOOP_ARRAY = <<<'EOT'
 $jsonData{{jsonPath}} = [];
-foreach (array_keys({{propertyAccessor}}) as {{indexVariable}}) {
+$array = {{propertyAccessor}};
+if ($array instanceof \Traversable) {
+    $array = iterator_to_array($array);
+}
+foreach (array_keys($array) as {{indexVariable}}) {
     {{code}}
 }
 
