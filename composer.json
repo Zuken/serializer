@@ -1,5 +1,5 @@
 {
-    "name": "liip/serializer",
+    "name": "zuken/serializer",
     "description": "High performance serializer that works with code generated helpers to achieve high throughput.",
     "type": "library",
     "license": "MIT",
@@ -9,15 +9,11 @@
             "homepage": "http://www.liip.ch"
         }
     ],
-    "support": {
-        "source": "https://github.com/liip/serializer",
-        "issues": "https://github.com/liip/serializer/issues"
-    },
     "require": {
         "php": "^7.2",
         "ext-json": "*",
         "doctrine/annotations": "^1.10.2",
-        "liip/metadata-parser": "^0.2",
+        "zuken/metadata-parser": "dev-master",
         "pnz/json-exception": "^1.0",
         "symfony/filesystem": "^4.4 || ^5.0",
         "symfony/finder": "^4.4 || ^5.0",
