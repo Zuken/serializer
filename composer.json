@@ -26,6 +26,12 @@
         "friendsofphp/php-cs-fixer": "^2.14",
         "jms/serializer": "^1.13 || ^2"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/Zuken/metadata-parser.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Liip\\Serializer\\": "src/"
